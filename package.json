@@ -1,0 +1,32 @@
+{
+  "name": "nodejs_todolist",
+  "version": "1.0.0",
+  "description": "Site dynamic en Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CedricSalaun/nodeJs_ToDoList.git"
+  },
+  "author": "Cédric",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CedricSalaun/nodeJs_ToDoList/issues"
+  },
+  "homepage": "https://github.com/CedricSalaun/nodeJs_ToDoList#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "install": "^0.10.2",
+    "materialize": "^1.0.0",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.1",
+    "nodemon": "^1.12.1",
+    "sequelize": "^4.22.15"
+  }
+}

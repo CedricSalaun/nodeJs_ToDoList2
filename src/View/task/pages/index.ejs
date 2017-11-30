@@ -1,0 +1,78 @@
+<% include ../partials/header.ejs %>
+<div class = "columns">
+    <div class = "column">
+        <div class = "column">
+            <h1 class = "title">Bienvenue</h1>
+        </div>
+    </div>
+</div>
+<div class = "columns">
+    <div class = "column">
+        <div class = "column">
+            <% include ../partials/menu_task.ejs %>
+            <div class = "columns">
+                <div class = "column">
+                    <table class = "table is-fullwidth">
+                        <thead>
+                        <tr>
+                            <th class = "has-text-centered">
+                                Titre
+                            </th>
+                            <th class = "has-text-centered">
+                                Resume
+                            </th>
+                            <th class = "has-text-centered">
+                                Statut
+                            </th>
+                            <th class = "has-text-centered">
+                                Actions
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class = "has-text-centered">
+                                task.title
+                            </td>
+                            <td class = "has-text-centered">
+                                task.resume
+                            </td>
+                            <td class = "has-text-centered">
+                                task.status
+                            </td>
+                            <td class = "has-text-centered">
+                                <a href = "#"
+                                   class = "button is-info is-outlined is-small">
+                                    Modifier</a>
+                                <a href = "#"
+                                   class = "button is-danger is-outlined is-small">Effacer
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "has-text-centered">
+                                task.title
+                            </td>
+                            <td class = "has-text-centered">
+                                task.resume
+                            </td>
+                            <td class = "has-text-centered">
+                                task.status
+                            </td>
+                            <td class = "has-text-centered">
+                                <a href = "#"
+                                   class = "button is-info is-outlined is-small">
+                                    Modifier</a>
+                                <a href = "#"
+                                   class = "button is-danger is-outlined is-small">Effacer
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer.ejs %>

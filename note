@@ -1,0 +1,13 @@
+<% tasks.forEach(function(task) { %>
+            <tr>
+                <td><%= task.title %></td>
+                <td><%= task.resume %></td>
+                <td><%= task.status %></td>
+                <td>
+                    <a href = "#" class="waves-effect light-blue accent-4 btn">Modifier</a>
+                    <a href = "#" class="waves-effect red lighten-1 btn">Supprimer</a>
+                </td>
+            </tr>
+            <% }); %>
+
+-
