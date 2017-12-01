@@ -9,13 +9,4 @@ const User = connect.define('user', {
     }
 });
 
-connect.sync({force: true}).then(() => {
-    User.create({
-        username: 'JhonDoe',
-        birthday: new Date(1986, 3, 7)
-    }).then(John => {
-        console.log(John.toJSON());
-    });
-});
-
 module.exports = User;

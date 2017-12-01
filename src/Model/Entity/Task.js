@@ -9,15 +9,17 @@ const Task = connect.define('task', {
         type: Sequelize.STRING,
         allowNull: true
     },
-    status: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    body: {
-        type: Sequelize.STRING,
+    content: {
+        type: Sequelize.TEXT,
         allowNull: true
     },
-    created_at: {
+    createdAt: {
+        type: Sequelize.DATE,
+        allowNull: true,
+        defaultValue: Sequelize.NOW,
+        isDate: true
+    },
+    updatedAt: {
         type: Sequelize.DATE,
         allowNull: true,
         defaultValue: Sequelize.NOW,
