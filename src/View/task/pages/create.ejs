@@ -12,14 +12,15 @@
     <div class = "column">
         <div class = "field">
             <div class = "field">
-                <label class = "label is-small">Titre</label>
+                <label class = "label is-small" for="title">Titre</label>
                 <div class = "field-body">
                     <div class = "field">
                         <p class = "control is-expanded">
                             <input class = "input"
                                    type = "text"
                                    placeholder = "Titre"
-                            name="title">
+                            name="title"
+                            id="title">
                         </p>
                     </div>
                 </div>
@@ -29,8 +30,8 @@
     <div class = "column">
         <div class = "field columns"
              style = "margin-bottom: -7px;">
-            <label class = "is-small label column is-11">Résumé</label>
-            <label class = "is-small label column">Statut</label>
+            <label class = "is-small label column is-11" for="resume">Résumé</label>
+            <label class = "is-small label column" for="status">Statut</label>
         </div>
         <div class = "field">
             <div class = "field-body">
@@ -38,18 +39,20 @@
                     <p class = "control is-expanded">
                         <input class = "input"
                                type = "text"
-                               placeholder = "Résumé">
+                               placeholder = "Résumé"
+                        name="resume"
+                        id="resume">
                     </p>
                 </div>
                 <div class = "field is-narrow">
                     <div class = "control">
                         <div class = "select">
-                            <select>
-                                <option>À faire
+                            <select id="status" name="status">
+                                <option value="a_faire">À faire
                                 </option>
-                                <option>En cours
+                                <option value="en_cours">En cours
                                 </option>
-                                <option>Fini
+                                <option value="fini">Fini
                                 </option>
                             </select>
                         </div>
@@ -63,8 +66,10 @@
             <div class = "field-body">
                 <div class = "field">
                     <div class = "control">
+                        <label for = "content"></label>
                     <textarea class = "textarea"
-                              placeholder = "Description de la tâche"></textarea>
+                              placeholder = "Description de la tâche"
+                    name="content" id="content"></textarea>
                     </div>
                 </div>
             </div>

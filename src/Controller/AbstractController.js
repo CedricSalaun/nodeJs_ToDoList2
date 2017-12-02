@@ -41,11 +41,9 @@ class AbstractController {
         });
 */
     }
-
     getService() {
         return this.service;
     }
-
     getRouter() {
         return this.router;
     }

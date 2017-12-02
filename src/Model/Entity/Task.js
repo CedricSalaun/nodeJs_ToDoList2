@@ -12,19 +12,11 @@ const Task = connect.define('task', {
     content: {
         type: Sequelize.TEXT,
         allowNull: true
-    },
-    createdAt: {
-        type: Sequelize.DATE,
-        allowNull: true,
-        defaultValue: Sequelize.NOW,
-        isDate: true
-    },
-    updatedAt: {
-        type: Sequelize.DATE,
-        allowNull: true,
-        defaultValue: Sequelize.NOW,
-        isDate: true
     }
-});
+},
+    {
+        timestamps: false,
+        underscored: true
+    });
 
 module.exports = Task;

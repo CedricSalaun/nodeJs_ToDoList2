@@ -1,10 +1,9 @@
 const {Sequelize} = require('sequelize');
-const Task = require('../Entity/Task');
 const Status = require('../Entity/Status');
 const dbConnect = require('../../Controller/Kernel/dbConnection');
 const Op = Sequelize.Op;
 
-class TaskService {
+class StatusService {
 /*
     static selectAll(callback) {
         Task.sync({force: true}).then(() => {
@@ -26,15 +25,14 @@ class TaskService {
     }
 */
     static addOne(request, callback) {
-        Task.sync().then(Status.sync()).then(Task.belongsTo(Status)).then(()=>{
-           Task.findOrCreate({where: {
-               title: request.title,
-               resume: request.resume,
-               content: request.content,
-               //status_uuid: ici la clé du statut ,
-           }}).spread((Task, created)=>{
-               console.log(Task.get({plain: true}), created);
-           });
+        Task.sync().then(()=>{
+            Task.findOrCreate({where:{
+                title:request.title,
+                resume:request.resume,
+                content:request.content
+            }}).spread((Task, created)=>{
+                console.log(Task.get({plain: true}), created)
+            });
         });
     }
 /*
@@ -61,4 +59,4 @@ class TaskService {
 */
 }
 
-module.exports = TaskService;
+module.exports = StatusService;
