@@ -41,7 +41,7 @@ Project dynamic made with
 
 ###
 
-Les paramètres de la DB sont réglable dans ~app/conf/dbConfig.js, par default la:
+Les paramètres de la DB (mysql) sont réglable dans ~app/conf/dbConfig.js, par default la:
 
 | DB            | user          | password  |
 | ------------- |:-------------:| ---------:|

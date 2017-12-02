@@ -24,6 +24,7 @@ class AbstractController {
                 data.id = callback.insertId;
                 response.json(data);
             });
+            response.end();
         });
 
 /*

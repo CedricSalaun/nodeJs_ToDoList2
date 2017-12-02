@@ -12,8 +12,7 @@ const db = {
             min: 0,
             acquire: 30000,
             idle: 10000
-        },
-        storage: 'database.sqlite'
+        }
     },
     dbProd:{
         host: 'localhost',
@@ -28,7 +27,8 @@ const db = {
             min:0,
             acquire:50000,
             idle: 10000
-        }
+        },
+        storage: 'database.sqlite'
     }
 };
 
