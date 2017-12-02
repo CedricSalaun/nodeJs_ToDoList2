@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+//const { Controller } = require('../src/Controller/AbstractController');
 const TaskController = require('../src/Controller/ControllerTask');
 //const StatusController = require('../src/Controller/ControllerStatus');
 
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 
 // app.use('/user', new Controller(UserModel));
 app.use('/task', TaskController);
+//app.use('/task', (new Controller(TaskController).getRouter()));
 //app.use('/status', StatusController);
 
 app.set('view engine', 'ejs');

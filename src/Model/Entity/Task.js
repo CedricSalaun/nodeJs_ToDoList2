@@ -12,11 +12,14 @@ const Task = connect.define('task', {
     content: {
         type: Sequelize.TEXT,
         allowNull: true
+    },
+    statusId: {
+        type: Sequelize.INTEGER,
+        field: 'statusId'
     }
-},
-    {
-        timestamps: false,
-        underscored: true
+}, {
+        timestamps: true,
+        underscored: false
     });
 
 module.exports = Task;

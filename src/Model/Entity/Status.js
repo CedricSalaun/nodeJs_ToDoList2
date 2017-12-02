@@ -1,18 +1,18 @@
 const Sequelize = require('sequelize');
 const connect = require('../../Controller/Kernel/dbConnection');
 const Status = connect.define('status', {
-        status: {
-            type: Sequelize.STRING,
-            allowNull: false
-        },
-        uuid: {
-            type: Sequelize.UUID,
-            primaryKey: true,
-            //defaultValue: Sequelize.UUIDV1
-        },
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
     },
-    {
-        timestamps: false
-    });
+    status: {
+        type: Sequelize.STRING,
+        allowNull: false
+    }
+}, {
+    timestamps: false,
+    underscored: false
+});
 
 module.exports = Status;
