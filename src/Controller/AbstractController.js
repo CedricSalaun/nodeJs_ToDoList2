@@ -23,8 +23,9 @@ class AbstractController {
             this.service.addOne(data, (callback) => {
                 data.id = callback.insertId;
                 response.json(data);
-                console.log(response.json(data));
+                //rconsole.log(response.json(data));
             });
+                //.send(response.json(data));
             next();
         });
 

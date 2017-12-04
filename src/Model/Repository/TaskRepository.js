@@ -8,8 +8,11 @@ const app = require('express')();
 class TaskService {
         static selectAll(request, response) {
                 Task.findAll({limit: 10})
-                    .then(Task => {console.log(Task)});
-               return Task;
+                    .then(Task => {
+                        //console.log(Task.dataValues)
+                        //console.log(response.json(Task))
+                    });
+               //return response.json(Task);
         }
 
     /*
