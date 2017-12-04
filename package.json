@@ -22,6 +22,7 @@
     "cors": "^2.8.4",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "express-redirect": "^1.2.2",
     "install": "^0.10.2",
     "materialize": "^1.0.0",
     "mysql": "^2.15.0",

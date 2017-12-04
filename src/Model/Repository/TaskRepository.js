@@ -1,21 +1,16 @@
-const {Sequelize} = require('sequelize');
+const { Sequelize } = require('sequelize');
 const Task = require('../Entity/Task');
 const Status = require('../Entity/Status');
 const dbConnect = require('../../Controller/Kernel/dbConnection');
 const Op = Sequelize.Op;
 const app = require('express')();
 
-
 class TaskService {
-    /*
-        static selectAll(callback) {
-            Task.sync({force: true}).then(() => {
-                Task.findAll({limit: 10}).then(Task => {
-                    console.log(Task + callback);
-                });
-            });
+        static selectAll(request, response) {
+                Task.findAll({limit: 10})
+                    .then(Task => {console.log(Task)});
+               return Task;
         }
-    */
 
     /*
         static selectOn(idTask, callback) {
@@ -28,7 +23,8 @@ class TaskService {
             });
         }
     */
-    static addOne(request, callback) {
+
+    static addOne(request) {
         Task.sync()
             .then(Status.sync())
             .then(Task.belongsTo(Status, {onDelete: 'SET NULL'}))
@@ -40,7 +36,8 @@ class TaskService {
                         content: request.content,
                         statusId: request.status,
                     }
-                }).spread((Task, created) => {
+                })
+            .spread((Task, created) => {
                     console.log(Task.get({plain: true}), created);
                 });
             });
@@ -57,6 +54,7 @@ class TaskService {
             });
         }
     */
+
     /*
         static deleteOne(idTask, callback) {
             Task.destroy({
@@ -71,3 +69,5 @@ class TaskService {
 }
 
 module.exports = TaskService;
+
+
